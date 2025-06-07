@@ -113,6 +113,8 @@ const app = express();
 
 //Variable mysql al cual llama a la libreria
 const mysql = require('mysql');
+const path = require('path');
+
 
 
 // Datos de configuracion de conexion a mysql
@@ -140,6 +142,8 @@ oConexion.connect(function (posibleError){
 app.set('view engine','ejs');
 // Le indicamos la carpeta donde se encontran los archivos ejs que sera views
 app.set('views',path.join(__dirname,'views'));
+
+app.use(express.urlencoded({ extended: false }));
 
 
 // Selecciona todos los productos y lanza un error si no renderiza como respuesta a la pagina index con los productos
