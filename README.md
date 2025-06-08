@@ -100,7 +100,7 @@ https://www.npmjs.com/package/express
 ```bash
 
 npm i express 
-
+npm i ejs
 ```
 
 ![alt text](image-9.png)
